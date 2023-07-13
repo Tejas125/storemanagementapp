@@ -10,5 +10,4 @@ public class StoremanagementappApplication {
 		SpringApplication.run(StoremanagementappApplication.class, args);
 	}
 	
-test test test
 }
