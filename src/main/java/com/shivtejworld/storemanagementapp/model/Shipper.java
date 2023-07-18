@@ -12,15 +12,6 @@ import javax.persistence.Table;
 @Table(name="shippers")
 public class Shipper {
 	
-	/*
-	 * ParticularId int,
-ParticularName varchar,
-ParticularType varchar,
-createdBy varchar,
-createdOn date,
-modifiedBy varchar,
-modifiedOn date
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id

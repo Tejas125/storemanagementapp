@@ -15,7 +15,7 @@ import com.shivtejworld.storemanagementapp.repository.ShipperRepository;
 @Service
 public class ShipperService {
 
-	@Autowired
+	@Autowired(required=true)
 	private ShipperRepository shipperRepository;
 
 	public List<Shipper> getAllShippers() {
