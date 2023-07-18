@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shivtejworld.storemanagementapp.model.Shipper;
+import com.shivtejworld.storemanagementapp.repository.ShipperRepository;
 import com.shivtejworld.storemanagementapp.service.ShipperService;
 
 @RestController
@@ -23,31 +24,30 @@ public class ShipperController {
 	@Autowired
 	private ShipperService shipperService;
 	
+	
 	@CrossOrigin
-	@GetMapping()
+	@GetMapping
 	public List<Shipper> getAllShippers() {
 		return shipperService.getAllShippers();
 	}
 
+	@CrossOrigin
 	@DeleteMapping
 	public String deleteShipperById(@RequestParam Long shipperID) {
 		return shipperService.deleteShipperById(shipperID);
 	}
 
+	@CrossOrigin
 	@PostMapping
 	public Shipper saveShipper(@RequestBody Shipper shipper) {
+		System.out.println(shipper.toString());
 		return shipperService.saveShipper(shipper);
 	}
-
-	@PatchMapping("/updateShipperPhone")
-	public String updateShipperPhone(@RequestParam Long shipperID, @RequestParam Integer phone) {
-		return shipperService.updateShipperPhone(shipperID, phone);
-	}
 	
-	@PatchMapping("/updateShipperName")
-	public String updateShipperName(@RequestParam Long shipperID, @RequestParam String shipperName) {
-		return shipperService.updateShipperName(shipperID, shipperName);
+	@CrossOrigin
+	@PatchMapping
+	public String updateShipper(@RequestParam Long shipperID, @RequestParam String shipperName, @RequestParam Long phone) {
+		return shipperService.updateShipper(shipperID, shipperName,phone);
 	}
-
 	
 }

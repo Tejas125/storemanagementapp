@@ -9,8 +9,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="shippers")
-public class Shipper {
+@Table(name="customers")
+public class Customers {
 	
 	/*
 	 * ParticularId int,
@@ -26,17 +26,17 @@ modifiedOn date
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "shipperid")
-	private Long shipperId;
+	private Long shipperID;
 	@Column(name = "shippername")
 	private String shipperName;
 	@Column(name = "phone")
 	private Long phone;
 	
-	public Long getShipperId() {
-		return shipperId;
+	public Long getShipperID() {
+		return shipperID;
 	}
-	public void setShipperId(Long shipperId) {
-		this.shipperId = shipperId;
+	public void setShipperID(Long shipperID) {
+		this.shipperID = shipperID;
 	}
 	public String getShipperName() {
 		return shipperName;
@@ -54,7 +54,7 @@ modifiedOn date
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "{"+this.shipperId+","+this.shipperName+","+this.phone+"}";
+		return "{"+this.shipperID+","+this.shipperName+","+this.phone+"}";
 	}
 	
 }
