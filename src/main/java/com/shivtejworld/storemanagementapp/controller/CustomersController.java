@@ -62,19 +62,19 @@ return CustomersService.saveCustomer(cust);
  * 
  * @CrossOrigin
  * 
- * @PatchMapping public String updateOrders(@RequestParam Number CustomersID,
+ * @PatchMapping public String updateOrders(@RequestParam Long CustomersID,
  * 
- * @RequestParam Varchar CustomerName,
+ * @RequestParam String CustomerName,
  * 
- * @RequestParam Varchar ContactName,
+ * @RequestParam String ContactName,
  * 
- * @RequestParam Varchar Address,
+ * @RequestParam String Address,
  * 
- * @RequestParam Char City,
+ * @RequestParam String City,
  * 
- * @RequestParam Int PostalCode,
+ * @RequestParam long PostalCode,
  * 
- * @RequestParam Char Country) { return
+ * @RequestParam String Country) { return
  * CustomersService.updateCustomers(CustomerID,CustomerName,ContactName,Address,
  * City,PostalCode,Country); }
  */
