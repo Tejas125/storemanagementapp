@@ -62,7 +62,7 @@ return CustomersService.saveCustomer(cust);
  * 
  * @CrossOrigin
  * 
- * @PatchMapping public String updateOrders(@RequestParam Long CustomersID,
+ * @PatchMapping public String updateCustomer(@RequestParam Long CustomersID,
  * 
  * @RequestParam String CustomerName,
  * 
@@ -75,7 +75,7 @@ return CustomersService.saveCustomer(cust);
  * @RequestParam long PostalCode,
  * 
  * @RequestParam String Country) { return
- * CustomersService.updateCustomers(CustomerID,CustomerName,ContactName,Address,
+ * CustomersService.updateCustomer(CustomerID,CustomerName,ContactName,Address,
  * City,PostalCode,Country); }
  */
 }
