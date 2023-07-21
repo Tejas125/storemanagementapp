@@ -19,9 +19,13 @@ public class OrderDetailsService {
 	public List<OrderDetails> getAllOrderDetails() {
 		List<OrderDetails> ordersList = new ArrayList<OrderDetails>();
 
+		Iterable<OrderDetails> iterator = orderDetailsRepository.findAll();
+		iterator.forEach(orderdetail -> ordersList.add(orderdetail));
 		/*
-		 * Iterable<Orders> iterator = orderDetailsRepository.findAll();
-		 * iterator.forEach(order -> ordersList.add(order));
+		 * 
+		 * Iterable<OrderDetails> iterator = orderDetailsRepository.findAll();
+		 * iterator.forEach(orderdetail -> ordersList.add(order
+		 * detail));
 		 * 
 		 * ordersList.sort((Orders o1, Orders o2) ->
 		 * o2.getOrderID().compareTo(o1.getOrderID()));
