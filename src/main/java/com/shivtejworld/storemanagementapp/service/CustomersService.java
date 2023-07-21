@@ -64,5 +64,18 @@ public class CustomersService {
 	public Customers saveCustomer(Customers cust) {
 		return customersRepository.save(cust);
 	}
+	public String updateCustomers(Long , Long customerID, Long employeeID, Date orderDate, Long shipperID) {
+
+		Optional<Orders> order = ordersRepository.findById(orderID);
+		if (order.isPresent()) {
+			order.get().setCustomerID(customerID);
+			order.get().setEmployeeID(employeeID);
+			order.get().setOrderDate(orderDate);
+			order.get().setShipperID(shipperID);
+			ordersRepository.save(order.get());
+			return "Shipper with ShipperID " + orderID + "Updated";
+		} else {
+			return "Shipper with ShipperID " + orderID + " Not Available";
+		}
 
 }
