@@ -63,19 +63,21 @@ public class CustomersService {
 
 	public Customers saveCustomer(Customers cust) {
 		return customersRepository.save(cust);
-	}
-	public String updateCustomers(Long , Long customerID, Long employeeID, Date orderDate, Long shipperID) {
+	} 
+	// public String updateCustomers(Long CustomerID, String CustomerName, String ContactName, String Address , String City, Long PostalCode, String Country) {
 
-		Optional<Orders> order = ordersRepository.findById(orderID);
-		if (order.isPresent()) {
-			order.get().setCustomerID(customerID);
-			order.get().setEmployeeID(employeeID);
-			order.get().setOrderDate(orderDate);
-			order.get().setShipperID(shipperID);
-			ordersRepository.save(order.get());
-			return "Shipper with ShipperID " + orderID + "Updated";
-		} else {
-			return "Shipper with ShipperID " + orderID + " Not Available";
-		}
+	// 	Optional<Customers> Customer = CoustomersRepository.findById(CustomerID);
+	// 	if (Customer.isPresent()) {
+	// 		Customer.get().setCustomerID(CustomerID);
+	// 		Customer.get().setCustomerName(CustomerName);
+	// 		Customer.get().setContactName(ContactName);
+	// 		Customer.get().setAddress(Address);
+	// 		Customer.get().setCity(City);
+	// 		Customer.get().setPostalCode(PostalCode);
+	// 		Customer.get().setCountry(Country);
+	// 		return "Coustomer with CoustomerID " + CoustomerID + "Updated";
+	// 	} else {
+	// 		return "Coustomer with CoustomerID" + CoustomerID + " Not Available";
+	// 	}
 
 }
