@@ -19,8 +19,8 @@ storemanagementapp/
 
 ### Prerequisites
 
-- Node.js / Python / Java (update as per your stack)
-- npm / pip / Maven (update as per your stack)
+- Java (update as per your stack)
+- Maven (update as per your stack)
 
 ### Installation
 
@@ -65,4 +65,4 @@ mvn test
 
 ## License
 
-MIT
+Shivtej World
