@@ -30,11 +30,9 @@ git clone <repo-url>
 cd storemanagementapp
 
 # Install dependencies
-npm install
-# or
-pip install -r requirements.txt
-# or
-mvn install
+mvn clean install
+
+mvn spring-boot:run 
 ```
 
 ### Running the App
