@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shivtejworld.storemanagementapp.model.Shipper;
-import com.shivtejworld.storemanagementapp.repository.ShipperRepository;
 import com.shivtejworld.storemanagementapp.service.ShipperService;
 
 @RestController
