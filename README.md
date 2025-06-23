@@ -30,6 +30,13 @@ git clone <repo-url>
 cd storemanagementapp
 
 # Install dependencies
+# install macport
+# google it macport download for mac
+
+# install git 
+
+sudo port install git
+
 mvn clean install
 
 mvn spring-boot:run 

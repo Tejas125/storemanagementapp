@@ -1,6 +1,6 @@
 package com.shivtejworld.storemanagementapp.model;
 /*
- * code by sanket
+ * code by shivani
  */
 public class Supplier {
 
