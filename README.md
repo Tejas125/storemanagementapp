@@ -1,6 +1,13 @@
 # Store Management App
+A comprehensive application for managing store operations efficiently.
 
-This is a sample Store Management Application.
+## Features
+Product management
+Customer management
+Order tracking
+Inventory control
+Reporting and analytics
+
 
 ## Project Structure
 
@@ -37,12 +44,17 @@ cd storemanagementapp
 
 sudo port install git
 
+sudo port install maven3
+
+# clean dependencies
 mvn clean install
+
+### Running the App
 
 mvn spring-boot:run 
 ```
 
-### Running the App
+
 
 ```bash
 npm start
