@@ -17,14 +17,14 @@ public class Customers {
 	private static final long serialVersionUID = 1L;
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "CustomeriD")
+	@Column(name = "Customer_id")
 	private Long CustomerID;
 	
 
-    @Column(name = "Customername")
+    @Column(name = "Customer_name")
 	private String CustomerName;
 
-    @Column(name="Contactname")
+    @Column(name="Contact_name")
 	private String ContactName;
 	
 
@@ -35,7 +35,7 @@ public class Customers {
     @Column(name = "City")
 	private String City;
     
-    @Column(name = "Postalcode")
+    @Column(name = "Postal_code")
 	private String PostalCode;
     
     @Column(name = "Country")
