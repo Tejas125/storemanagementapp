@@ -1,3 +1,4 @@
+
 package com.shivtejworld.storemanagementapp.controller;
 
 import java.util.Date;
@@ -21,33 +22,37 @@ import com.shivtejworld.storemanagementapp.service.OrdersService;
 @RequestMapping("/orders")
 public class OrdersController {
 
-	@Autowired(required=true)
-	private OrdersService OrdersService;
-	
-	
+	@Autowired(required = true)
+	private OrdersService ordersService;
+
 	@CrossOrigin
 	@GetMapping
 	public List<Orders> getAllOrders() {
-		return OrdersService.getAllOrders();
+		return ordersService.getAllOrders();
 	}
 
 	@CrossOrigin
 	@DeleteMapping
 	public String deleteOrderById(@RequestParam Long orderID) {
-		return OrdersService.deleteOrderById(orderID);
+		return ordersService.deleteOrderById(orderID);
 	}
 
 	@CrossOrigin
 	@PostMapping
 	public Orders saveOrder(@RequestBody Orders order) {
 		System.out.println(order);
-		return OrdersService.saveOrder(order);
+		return ordersService.saveOrder(order);
 	}
-	
+
 	@CrossOrigin
 	@PatchMapping
-	public String updateOrders(@RequestParam Long orderID, @RequestParam Long customerID, @RequestParam Long employeeID, @RequestParam Date orderDate, @RequestParam Long shipperID) {
-		return OrdersService.updateOrder(orderID,customerID,employeeID,orderDate,shipperID);
+	public String updateOrders(
+			@RequestParam Long orderID,
+			@RequestParam Long customerID,
+			@RequestParam Long employeeID,
+			@RequestParam Date orderDate,
+			@RequestParam Long shipperID) {
+		return ordersService.updateOrder(orderID, customerID, employeeID, orderDate, shipperID);
 	}
-	
+
 }

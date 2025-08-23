@@ -1,3 +1,4 @@
+
 package com.shivtejworld.storemanagementapp.controller;
 
 import java.util.List;
@@ -22,8 +23,7 @@ public class ShipperController {
 
 	@Autowired
 	private ShipperService shipperService;
-	
-	
+
 	@CrossOrigin
 	@GetMapping
 	public List<Shipper> getAllShippers() {
@@ -42,11 +42,14 @@ public class ShipperController {
 		System.out.println(shipper.toString());
 		return shipperService.saveShipper(shipper);
 	}
-	
+
 	@CrossOrigin
 	@PatchMapping
-	public String updateShipper(@RequestParam Long shipperID, @RequestParam String shipperName, @RequestParam Long phone) {
-		return shipperService.updateShipper(shipperID, shipperName,phone);
+	public String updateShipper(
+			@RequestParam Long shipperID,
+			@RequestParam String shipperName,
+			@RequestParam Long phone) {
+		return shipperService.updateShipper(shipperID, shipperName, phone);
 	}
-	
+
 }
