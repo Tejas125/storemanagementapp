@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.shivtejworld.storemanagementapp.model.Orders;
-import com.shivtejworld.storemanagementapp.model.Shipper;
 import com.shivtejworld.storemanagementapp.repository.OrdersRepository;
 
 @Service
