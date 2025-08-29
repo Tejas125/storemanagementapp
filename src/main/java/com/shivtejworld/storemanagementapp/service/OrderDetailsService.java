@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.shivtejworld.storemanagementapp.model.OrderDetails;
-import com.shivtejworld.storemanagementapp.model.Orders;
 import com.shivtejworld.storemanagementapp.repository.OrderDetailsRepository;
 @Service
 public class OrderDetailsService {
