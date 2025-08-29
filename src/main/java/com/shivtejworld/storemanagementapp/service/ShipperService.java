@@ -1,10 +1,8 @@
 package com.shivtejworld.storemanagementapp.service;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,10 +32,10 @@ public class ShipperService {
 	}
 
 	public Shipper saveShipper(Shipper shipper) {
-		Shipper sp = new Shipper();
+		Shipper shipper2 = new Shipper();
 
 		/*System.out.println(shipperRepository.count());*/
-		return shipperRepository.save(shipper);
+		return shipperRepository.save(shipper2);
 	}
 
 	public String updateShipper(Long shipperID, String shipperName, Long phone) {
