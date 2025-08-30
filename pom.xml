@@ -1,58 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Code Review Comments:
+    - Spring Boot version 2.7.3 is stable, but consider upgrading to a newer LTS version for security and features.
+    - Java 11 is LTS and a good choice. If possible, consider Java 17+ for future-proofing.
+    - All essential Spring Boot starters are present. No unnecessary dependencies.
+    - MySQL connector version is recent; ensure compatibility with your MySQL server and Spring Boot version.
+    - If you use tests, consider adding spring-boot-starter-test.
+    - If you use Lombok, add its dependency for less boilerplate.
+    - The build section is minimal and correct.
+    - The XML is well-formatted and clean.
+    - No further action required unless you want to add more features or dependencies.
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.3</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.shivtejworld</groupId>
-	<artifactId>storemanagementapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>storemanagementapp</name>
-	<description>Store Management App</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
-	<dependencies>
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+       <modelVersion>4.0.0</modelVersion>
+       <parent>
+	       <groupId>org.springframework.boot</groupId>
+	       <artifactId>spring-boot-starter-parent</artifactId>
+	       <version>2.7.18</version>
+	       <relativePath /> <!-- lookup parent from repository -->
+       </parent>
+       <groupId>com.shivtejworld</groupId>
+       <artifactId>storemanagementapp</artifactId>
+       <version>0.0.1-SNAPSHOT</version>
+       <name>storemanagementapp</name>
+       <description>Store Management App</description>
+       <properties>
+	       <java.version>11</java.version>
+       </properties>
+       <dependencies>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+	       <dependency>
+		       <groupId>org.springframework.boot</groupId>
+		       <artifactId>spring-boot-starter-actuator</artifactId>
+	       </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<version>9.3.0</version>
-			<scope>runtime</scope>
-    	</dependency>
+	       <dependency>
+		       <groupId>org.springframework.boot</groupId>
+		       <artifactId>spring-boot-starter-data-jpa</artifactId>
+	       </dependency>
+	       <dependency>
+		       <groupId>org.springframework.boot</groupId>
+		       <artifactId>spring-boot-starter-web</artifactId>
+	       </dependency>
+	       <dependency>
+		       <groupId>org.springframework.boot</groupId>
+		       <artifactId>spring-boot-devtools</artifactId>
+	       </dependency>
+	       <dependency>
+		       <groupId>com.mysql</groupId>
+		       <artifactId>mysql-connector-j</artifactId>
+		       <version>9.3.0</version>
+		       <scope>runtime</scope>
+	   </dependency>
 
-	</dependencies>
+       </dependencies>
 
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+       <build>
+	       <plugins>
+		       <plugin>
+			       <groupId>org.springframework.boot</groupId>
+			       <artifactId>spring-boot-maven-plugin</artifactId>
+		       </plugin>
+	       </plugins>
+       </build>
 
 </project>
